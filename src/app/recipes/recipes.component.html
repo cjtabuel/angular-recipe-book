@@ -1,0 +1,23 @@
+<h2>Recipes</h2>
+<hr>
+<div class="row">
+  <div class="col-md-5">
+
+    <app-recipe-list
+     (recipeToDisplay)="recipeOnDisplay = $event">
+    </app-recipe-list>
+    
+  </div>
+  <div class="col-md-7">
+
+    <app-recipe-detail 
+      [receivedRecipeDetails]="recipeOnDisplay"
+      *ngIf="recipeOnDisplay; else infoText">
+    </app-recipe-detail>
+    
+    <ng-template #infoText>
+      <p>Please select a recipe.</p>
+    </ng-template>
+    
+  </div>
+</div>
