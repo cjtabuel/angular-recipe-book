@@ -1,9 +1,13 @@
-<a class="list-group-item clearfix">
-  <div class="pull-left">
-    <h4 class="list-group-item-heading">{{ recipeItems.name }}</h4>
-    <p class="list-group-item-text">{{ recipeItems.description }}</p>
-  </div>
-  <span class="pull-right">
-    <img [src]="recipeItems.imgPath" [alt]="recipeItems.imgPath" class="img-responsive" style="max-height: 50px">
-  </span>
-</a>
+<div class="list-group">
+  <a class="list-group-item clearfix">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h4>{{ recipeItems.name }}</h4>
+        <p>{{ recipeItems.description }}</p>
+      </div>
+      <div>
+        <img [src]="recipeItems.imgPath" [alt]="recipeItems.imgPath" class="img-fluid" style="max-height: 50px">
+      </div>
+    </div>
+  </a>
+</div>
