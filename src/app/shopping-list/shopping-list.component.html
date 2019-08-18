@@ -6,7 +6,7 @@
       <app-shopping-edit (addIngredients)="onIngredientsAdded($event)" (clearIngredients)="onIngredientsCleared()">
       </app-shopping-edit>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-7">
       <ul class="list-group my-5" *ngIf="ingredient; else infoText">
         <a hover class="list-group-item" style="cursor: pointer" *ngFor="let ingredientItem of ingredient">
           {{ ingredientItem.name }} ({{ ingredientItem.amount }})
